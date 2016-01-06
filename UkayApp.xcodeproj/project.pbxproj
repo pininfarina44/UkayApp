@@ -15,6 +15,8 @@
 		F012B77E1C3DC3A7003D827C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F012B77C1C3DC3A7003D827C /* LaunchScreen.storyboard */; };
 		F012B7891C3DC3A7003D827C /* UkayAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7881C3DC3A7003D827C /* UkayAppTests.swift */; };
 		F012B7941C3DC3A7003D827C /* UkayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7931C3DC3A7003D827C /* UkayAppUITests.swift */; };
+		F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */; };
+		F012B7AD1C3DCF23003D827C /* images in Resources */ = {isa = PBXBuildFile; fileRef = F012B7AC1C3DCF23003D827C /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F012B78F1C3DC3A7003D827C /* UkayAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UkayAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F012B7931C3DC3A7003D827C /* UkayAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UkayAppUITests.swift; sourceTree = "<group>"; };
 		F012B7951C3DC3A7003D827C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F012B7AC1C3DCF23003D827C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		F012B7701C3DC3A7003D827C /* UkayApp */ = {
 			isa = PBXGroup;
 			children = (
+				F012B7AC1C3DCF23003D827C /* images */,
+				F012B7A31C3DC9D1003D827C /* Main */,
+				F012B7A21C3DC9C3003D827C /* Service */,
+				F012B7A11C3DC9B6003D827C /* View Controllers */,
 				F012B7711C3DC3A7003D827C /* AppDelegate.swift */,
-				F012B7731C3DC3A7003D827C /* MasterViewController.swift */,
-				F012B7751C3DC3A7003D827C /* DetailViewController.swift */,
 				F012B7771C3DC3A7003D827C /* Main.storyboard */,
 				F012B77A1C3DC3A7003D827C /* Assets.xcassets */,
 				F012B77C1C3DC3A7003D827C /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				F012B7951C3DC3A7003D827C /* Info.plist */,
 			);
 			path = UkayAppUITests;
+			sourceTree = "<group>";
+		};
+		F012B7A11C3DC9B6003D827C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F012B7731C3DC3A7003D827C /* MasterViewController.swift */,
+				F012B7751C3DC3A7003D827C /* DetailViewController.swift */,
+				F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F012B7A21C3DC9C3003D827C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		F012B7A31C3DC9D1003D827C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F012B7AD1C3DCF23003D827C /* images in Resources */,
 				F012B77E1C3DC3A7003D827C /* LaunchScreen.storyboard in Resources */,
 				F012B77B1C3DC3A7003D827C /* Assets.xcassets in Resources */,
 				F012B7791C3DC3A7003D827C /* Main.storyboard in Resources */,
@@ -259,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */,
 				F012B7761C3DC3A7003D827C /* DetailViewController.swift in Sources */,
 				F012B7741C3DC3A7003D827C /* MasterViewController.swift in Sources */,
 				F012B7721C3DC3A7003D827C /* AppDelegate.swift in Sources */,
