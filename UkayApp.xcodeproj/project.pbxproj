@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FE90971F90371AE8FE408A4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF95E8088BDF3AE91C7D6D4 /* Pods.framework */; };
 		F012B7721C3DC3A7003D827C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7711C3DC3A7003D827C /* AppDelegate.swift */; };
 		F012B7741C3DC3A7003D827C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7731C3DC3A7003D827C /* MasterViewController.swift */; };
 		F012B7761C3DC3A7003D827C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7751C3DC3A7003D827C /* DetailViewController.swift */; };
@@ -17,6 +18,7 @@
 		F012B7941C3DC3A7003D827C /* UkayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7931C3DC3A7003D827C /* UkayAppUITests.swift */; };
 		F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */; };
 		F012B7AD1C3DCF23003D827C /* images in Resources */ = {isa = PBXBuildFile; fileRef = F012B7AC1C3DCF23003D827C /* images */; };
+		F012B7AF1C3DDDF6003D827C /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7AE1C3DDDF6003D827C /* ServerConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BF95E8088BDF3AE91C7D6D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4251F12F2BF1C923BE010350 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EE6A246C16875E5012FE50E9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F012B76E1C3DC3A7003D827C /* UkayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UkayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F012B7711C3DC3A7003D827C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F012B7731C3DC3A7003D827C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		F012B7951C3DC3A7003D827C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F012B7AC1C3DCF23003D827C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		F012B7AE1C3DDDF6003D827C /* ServerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE90971F90371AE8FE408A4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D795EFD4E55E1E8B2BEE041 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BF95E8088BDF3AE91C7D6D4 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D164D81E70E081AC41628EC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A246C16875E5012FE50E9 /* Pods.debug.xcconfig */,
+				4251F12F2BF1C923BE010350 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F012B7651C3DC3A7003D827C = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +111,8 @@
 				F012B7871C3DC3A7003D827C /* UkayAppTests */,
 				F012B7921C3DC3A7003D827C /* UkayAppUITests */,
 				F012B76F1C3DC3A7003D827C /* Products */,
+				D164D81E70E081AC41628EC8 /* Pods */,
+				4D795EFD4E55E1E8B2BEE041 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +173,7 @@
 		F012B7A21C3DC9C3003D827C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F012B7AE1C3DDDF6003D827C /* ServerConnection.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -165,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F012B7981C3DC3A7003D827C /* Build configuration list for PBXNativeTarget "UkayApp" */;
 			buildPhases = (
+				E2F11BB3CDEC48678F52E2A8 /* Check Pods Manifest.lock */,
 				F012B76A1C3DC3A7003D827C /* Sources */,
 				F012B76B1C3DC3A7003D827C /* Frameworks */,
 				F012B76C1C3DC3A7003D827C /* Resources */,
+				C5F170B785403A71B3162372 /* Embed Pods Frameworks */,
+				DA1875FC19CEE2A6523E1AB0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,6 +315,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C5F170B785403A71B3162372 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA1875FC19CEE2A6523E1AB0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F11BB3CDEC48678F52E2A8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F012B76A1C3DC3A7003D827C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,6 +371,7 @@
 				F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */,
 				F012B7761C3DC3A7003D827C /* DetailViewController.swift in Sources */,
 				F012B7741C3DC3A7003D827C /* MasterViewController.swift in Sources */,
+				F012B7AF1C3DDDF6003D827C /* ServerConnection.swift in Sources */,
 				F012B7721C3DC3A7003D827C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +512,7 @@
 		};
 		F012B7991C3DC3A7003D827C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6A246C16875E5012FE50E9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UkayApp/Info.plist;
@@ -444,6 +524,7 @@
 		};
 		F012B79A1C3DC3A7003D827C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4251F12F2BF1C923BE010350 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UkayApp/Info.plist;
@@ -520,6 +601,7 @@
 				F012B79A1C3DC3A7003D827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F012B79B1C3DC3A7003D827C /* Build configuration list for PBXNativeTarget "UkayAppTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +610,7 @@
 				F012B79D1C3DC3A7003D827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F012B79E1C3DC3A7003D827C /* Build configuration list for PBXNativeTarget "UkayAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +619,7 @@
 				F012B7A01C3DC3A7003D827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

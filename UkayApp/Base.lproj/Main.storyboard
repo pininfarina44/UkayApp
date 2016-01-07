@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="bLb-P5-AWW">
             <objects>
-                <viewController id="mRm-IB-GgK" sceneMemberID="viewController">
+                <viewController id="mRm-IB-GgK" customClass="LoginViewController" customModule="UkayApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tfc-zs-BJL"/>
                         <viewControllerLayoutGuide type="bottom" id="m9Z-T1-fqF"/>
@@ -95,11 +95,17 @@
                                 <rect key="frame" x="468" y="329" width="73" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="mRm-IB-GgK" eventType="touchUpInside" id="pid-qY-cDE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-pg-Pdb">
                                 <rect key="frame" x="350" y="329" width="78" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearAction:" destination="mRm-IB-GgK" eventType="touchUpInside" id="FSJ-FI-fT4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images/logo.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-id-ym5">
                                 <rect key="frame" x="287" y="151" width="204" height="32"/>
@@ -107,6 +113,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="ML0-tL-bAa" id="QMo-FU-CZ7"/>
+                        <outlet property="userNameTextField" destination="ea0-vW-cdo" id="QXE-o8-hLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aq-RW-XOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
