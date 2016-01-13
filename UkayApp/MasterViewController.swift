@@ -12,6 +12,8 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
+    
+    var authenticated = false
 
 
     override func viewDidLoad() {
@@ -21,10 +23,23 @@ class MasterViewController: UITableViewController {
 
         //let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         //self.navigationItem.rightBarButtonItem = addButton
+        
+        if (!authenticated){
+            
+            
+            
+            let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") as! LoginViewController
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(loginVC, animated: false, completion: nil)
+            })
+        }
+
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
     }
 
     override func viewWillAppear(animated: Bool) {

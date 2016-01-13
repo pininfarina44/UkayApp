@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     //Server variable
     let serverConnection = ServerConnection();
     
+    //class variables
+    var driverName = String()
+
     
     //button actions
     @IBAction func clearAction(sender: AnyObject) {
@@ -35,19 +38,19 @@ class LoginViewController: UIViewController {
             return
         }
         
-        
-        let driverName = serverConnection.login(self.userNameTextField.text!, pass: self.passwordTextField.text!)
+        driverName = serverConnection.login(self.userNameTextField.text!, pass: self.passwordTextField.text!)
         if driverName != "" {
             print(driverName)
             self.userNameTextField.text = ""
             self.passwordTextField.text = ""
+            performSegueWithIdentifier("routeScheduleSegue", sender: self)
+            
         }
         else{
             //show error message if username or password is wrong
             let alertController = UIAlertController(title: "Error", message:
                 "Authorization Failded", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            
             self.presentViewController(alertController, animated: true, completion: nil)
 
         }
@@ -67,14 +70,20 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destination : RouteScheduleViewController = segue.destinationViewController as! RouteScheduleViewController
+        
+        destination.driverName = self.driverName
+        
+        
+        
     }
-    */
+    
 
 }

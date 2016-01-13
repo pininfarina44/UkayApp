@@ -19,6 +19,7 @@
 		F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */; };
 		F012B7AD1C3DCF23003D827C /* images in Resources */ = {isa = PBXBuildFile; fileRef = F012B7AC1C3DCF23003D827C /* images */; };
 		F012B7AF1C3DDDF6003D827C /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7AE1C3DDDF6003D827C /* ServerConnection.swift */; };
+		F012B7B11C456AD5003D827C /* RouteScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012B7B01C456AD5003D827C /* RouteScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F012B7AC1C3DCF23003D827C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		F012B7AE1C3DDDF6003D827C /* ServerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
+		F012B7B01C456AD5003D827C /* RouteScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				F012B7731C3DC3A7003D827C /* MasterViewController.swift */,
 				F012B7751C3DC3A7003D827C /* DetailViewController.swift */,
 				F012B7AA1C3DCA4C003D827C /* LoginViewController.swift */,
+				F012B7B01C456AD5003D827C /* RouteScheduleViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F012B7AB1C3DCA4C003D827C /* LoginViewController.swift in Sources */,
+				F012B7B11C456AD5003D827C /* RouteScheduleViewController.swift in Sources */,
 				F012B7761C3DC3A7003D827C /* DetailViewController.swift in Sources */,
 				F012B7741C3DC3A7003D827C /* MasterViewController.swift in Sources */,
 				F012B7AF1C3DDDF6003D827C /* ServerConnection.swift in Sources */,
