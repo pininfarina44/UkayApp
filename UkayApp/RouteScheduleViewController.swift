@@ -12,31 +12,50 @@ class RouteScheduleViewController: UIViewController, UITableViewDelegate, UITabl
     
     //class variables
     var driverName = String()
-    let routes = ["L4(WED) WEST", "EAST COAST TRANSFER"]
-
+    var routes = [String]()
+    
     //view controller members
     @IBOutlet weak var driverNameLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var routeTable: UITableView!
+    @IBOutlet var tableView: UITableView! = UITableView()
+    
     
     //view controller member actions
     @IBAction func continueButtonTouched(sender: AnyObject) {
+        print(routes[0])
+        let presentingViewController :UIViewController! = self.presentingViewController;
         
+        self.dismissViewControllerAnimated(false) {
+            // go back to MainMenuView as the eyes of the user
+            presentingViewController.dismissViewControllerAnimated(false, completion: nil)
+        }
     }
     @IBAction func logOutButtonTouched(sender: AnyObject) {
+        performSegueWithIdentifier("logOutSegue", sender: self)
+    }
+    //Action when a new date is selected
+    @IBAction func dateChanged(sender: AnyObject) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let date = dateFormatter.stringFromDate(datePicker.date)
+        let serverConnection = ServerConnection(object: self)
+        serverConnection.getRoutes(date, driver: self.driverName)
         
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        self.routeTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "routeCell")
+        tableView.delegate = self
+        tableView.dataSource = self
         driverNameLabel.text = driverName
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let date = dateFormatter.stringFromDate(datePicker.date)
+        let serverConnection = ServerConnection(object: self)
+        serverConnection.getRoutes(date, driver: self.driverName)
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,26 +63,23 @@ class RouteScheduleViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - Table view data source
     
-    func numberOfSectionsInTableView(routeTable: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.routes.count;
     }
     
-    func tableView(routeTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return routes.count
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        
+        cell.textLabel!.text = self.routes[indexPath.row]
+        cell.textLabel?.textAlignment = .Center
+        cell.textLabel!.font = UIFont(name:"Helvetica Neue", size:35)
+        
+        return cell
     }
     
-    func tableView(routeTable: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = routeTable.dequeueReusableCellWithIdentifier("routeCell", forIndexPath: indexPath) 
-    
-    // Configure the cell...
-    cell.textLabel?.text = routes[indexPath.row]
-    cell.detailTextLabel?.text = driverName
-    
-    return cell
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -99,15 +115,15 @@ class RouteScheduleViewController: UIViewController, UITableViewDelegate, UITabl
     }
     */
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

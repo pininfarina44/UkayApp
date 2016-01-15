@@ -13,9 +13,9 @@ class LoginViewController: UIViewController {
     //Text field variables
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    //image view variable
+    @IBOutlet weak var logoView: UIImageView!
     
-    //Server variable
-    let serverConnection = ServerConnection();
     
     //class variables
     var driverName = String()
@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonAction(sender: AnyObject) {
+        let serverConnection = ServerConnection(object: self)
         //show error message if username text field is empty
         if userNameTextField.text!.isEmpty {
             let alertController = UIAlertController(title: "Error", message:
@@ -60,8 +61,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        logoView.image = UIImage (named: "images/logo.png")
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
