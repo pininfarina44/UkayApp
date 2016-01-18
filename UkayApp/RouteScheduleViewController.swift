@@ -13,6 +13,7 @@ class RouteScheduleViewController: UIViewController, UITableViewDelegate, UITabl
     //class variables
     var driverName = String()
     var routes = [String]()
+
     
     //view controller members
     @IBOutlet weak var driverNameLabel: UILabel!
@@ -27,7 +28,7 @@ class RouteScheduleViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.dismissViewControllerAnimated(false) {
             // go back to MainMenuView as the eyes of the user
-            presentingViewController.dismissViewControllerAnimated(false, completion: nil)
+            presentingViewController.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     @IBAction func logOutButtonTouched(sender: AnyObject) {

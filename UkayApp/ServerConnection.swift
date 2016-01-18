@@ -16,7 +16,7 @@ class ServerConnection {
     *
     */
     //Route Schedule Service
-    var rss = RouteScheduleViewController()
+    var loginService = LoginViewController()
     //db initializatin
     let db = try! Connection("/Users/berkay/Desktop/Objective C workstation/UkayApp/UkayApp/UKDB");
     
@@ -34,8 +34,8 @@ class ServerConnection {
     *
     */
     init(object:AnyObject){
-        if let incomingObj = object as? RouteScheduleViewController {
-            self.rss = incomingObj
+        if let incomingObj = object as? LoginViewController {
+            self.loginService = incomingObj
         }
     }
     
@@ -84,15 +84,15 @@ class ServerConnection {
                         let route = obj["\(i)"] as! [String];
                         items.append(route[0]); //Route Name
                         //items.append(route[2]); //Driver Name
-                        self.rss.routes = items
+                        self.loginService.routes = items
                         dispatch_async(dispatch_get_main_queue(), {
-                            self.rss.tableView.reloadData();
+                            self.loginService.tableView.reloadData();
                         });
                     }
                 }else{
-                    self.rss.routes = ["<< No route scheduled >>"]
+                    self.loginService.routes = ["<< No route scheduled >>"]
                     dispatch_async(dispatch_get_main_queue(), {
-                        self.rss.tableView.reloadData();
+                        self.loginService.tableView.reloadData();
                     });
                     
                 }
